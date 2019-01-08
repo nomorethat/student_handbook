@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="jquery-1.9.0.min.js"></script>
+	<script type="text/javascript" src="functions.js"></script>
+	<title>Справочник ИВТ</title>
+</head>
+<body>
+	<div id="page">
+		<div id="header">
+			<table id="first" cellpadding="0" cellspacing="0">
+				<tr>
+					<td id="first">
+						<span id="dog"><b>@</b></span>
+					</td>
+					<td id="second">
+						<span>WebCatalog.ru - Справочник групп ПМИ и ФИИТ</span>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="line_to_menu">
+		</div>
+		<div id="topmenu" >
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					<td>
+						<a href="#">Главная</a>
+					</td>
+					<td>
+						<a href="#">О нас</a>
+					</td>
+					<td>
+						<a href="#">Услуги</a>
+					</td>
+					<td>
+						<a href="#">Контакты</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="display_for_topmenu">
+		</div>
+		<div id="inside_title">
+			<h1>WebCatalog.ru</h1>
+			<h2>Наиболее полный справочник</h2>
+			<h2>групп ПМИ и ФИИТ</h2>
+		</div>
+		<div id="line_to_inside_title">
+		</div>
+		<div id="main_content">
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					<td>
+						<div id="content">
+							<h1>Справочник групп ПМИ и ФИИТ</h1>
+							<div id="div_for_table_for_add_people_and_search">
+								<table id="table_for_add_people_and_search" border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td>
+											<a href="#" onclick="return false;" id="add_new_people">+ Добавить нового участника в таблицу</a>
+											<a href="#" onclick="return false;" id="cancel_add_new_people">- Отменить добавление нового участника</a>
+										</td>
+										<td>
+											<div id="search">
+												<table id="table_search" cellpadding="0" cellspacing="0">	
+													<tr>
+														
+														<td>
+															<input id="input_search" name="input_search" type="text" placeHolder="Поиск..." />
+														</td>
+														<td>
+															<img src="images/search.png" />
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+									</td>
+								</table>
+							</div>
+							<div id="form_for_add_people">
+								<form name="form_add_people" id="form_add_people" action="#" method="post" onsubmit="return false;">
+									<table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td>
+												<input id="fi" name="fi" type="text" placeHolder="ФИ" />
+											</td>
+											<td>
+												<input id="input_date" type="date" name="date" min="1990-01-01" max="2000-01-01"/>
+											</td>
+											<td>
+												<select id="select_group" name="group">
+													<option disabled selected style="display: none;">Укажите группу</option>
+													<option value="pmi">ПМИ</option>
+													<option value="fiit">ФИИТ</option>
+												</select>
+											</td>
+										</tr>
+										</tr>
+											<td>
+												<select id="select_floor" name="floor">
+													<option disabled selected style="display: none;">Укажите пол</option>
+													<option value="m">Мужской</option>
+													<option value="w">Женский</option>
+												</select>
+											</td>
+											<td>
+												<input id="add_telefon" type="number" name="tel" placeHolder="Телефон +7..." size="10" />
+											</td>
+											<td>
+											</td>
+										</tr>
+										</tr>
+											<td>
+											</td>
+											<td>
+											</td>
+											<td>
+												<input id="button_add_in_table" type="submit" value="+Добавить в таблицу" />
+											</td>
+										</tr>
+									</table>
+								</form>
+							</div>
+							
+							<table id="table_with_people_list" border="1" cellpadding="0" cellspacing="0">					
+							</table>
+							<br />
+							<br />
+						</div>
+					</td>
+					<td id="separator">
+						
+					</td>
+					<td valign="top">
+						<br />
+						<div id="filters">
+							<div id="header_div_filters">
+								<h2>Filters</h2>
+							</div>
+							<table cellpadding="0" cellspacing="0" id="item_filters">
+								<tr>
+									<td colspan="3">
+										<span>Пол</span>
+									</td>
+									
+								</tr>
+								<tr>
+									<td>
+										<input type="radio" name="floor_filters" value="1" CHECKED/>Любой
+									</td>
+									<td>
+										<input type="radio" name="floor_filters" value="2" />Мужской
+									</td>
+									<td>
+										<input type="radio" name="floor_filters" value="3" />Женский
+									</td>
+								</tr>
+								<tr>
+									<td colspan="3">
+										<hr />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Возраст: 
+									</td>
+									<td colspan="2">
+										<select name="filters_age">
+											<option value="0">любой
+											<option value="1">20
+											<option value="2">21
+											<option value="3">22
+											<option value="4">23
+											<option value="5">24
+											<option value="6">25
+											<option value="7">26
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="3">
+										<hr />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Группа: 
+									</td>
+									<td colspan="2">
+										<select name="filters_group">
+											<option value="0">любая
+											<option value="1">ПМИ
+											<option value="2">ФИИТ
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="3">
+										<hr />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="3"align="center">
+										<input id="filters_submit" type="submit" value="Применить" />
+									</td>
+								</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="clear"></div>
+		<div id="footer">
+			я подвал
+		</div>
+	</div>
+
+</body>
+</html>
+
+
